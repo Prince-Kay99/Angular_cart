@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { SOAP_API_URL } from 'environment';
+import { BehaviorSubject } from 'rxjs';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
@@ -9,9 +10,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 })
 export class MyServiceService {
 
-private cartItemsNum = 10;
+private cartItemsNum= 0;
 
-
+message:string[]=[];
   constructor(private http:HttpClient) { }
 
   getCartItems(){
@@ -36,4 +37,13 @@ private cartItemsNum = 10;
     }
     
    }
+   clear(){
+    this.message=[]
+   }
+
+   //added code
+   addToCart(products: any){
+    this.cartItemsNum
+   }
+
 }

@@ -8,6 +8,8 @@ import { MyServiceService } from '../my-service.service';
 })
 export class NavBarComponent {
 
+  public itemsincart: number = 0
+
   constructor(private api : MyServiceService){
 
   }
@@ -15,10 +17,13 @@ export class NavBarComponent {
   public productList : any
 
   ngOnInit(): void {
-
    
     
-  }
+    }
+   
+    
+  
+
 
 }
 
