@@ -21,7 +21,10 @@ export class NavBarComponent {
     
     }
    
-    
+    getItemSize(){
+      this.api.getCartItems
+      this.api.increaseCart
+    }
   
 
 

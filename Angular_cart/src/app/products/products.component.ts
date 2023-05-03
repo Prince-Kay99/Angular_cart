@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyServiceService } from '../my-service.service';
+import { CartServiceService } from '../cart-service.service';
 
 @Component({
   selector: 'app-products',
@@ -23,7 +24,9 @@ export class ProductsComponent implements OnInit{
  */
 
 
-
+addToCart(){
+//  this.cartApi.addToCart
+}
 
 
 //@Input('productCanBeAnyName' product?:product)   
@@ -43,7 +46,7 @@ handleClick() {
   
 }
 
-constructor(private api : MyServiceService){
+constructor(private api : MyServiceService, private cartApi: CartServiceService){
   
 }
 

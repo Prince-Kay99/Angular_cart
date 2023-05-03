@@ -11,9 +11,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 export class MyServiceService {
 
 private cartItemsNum= 0;
-
+//tyo access html tags from here u use document.getId
 message:string[]=[];
   constructor(private http:HttpClient) { }
+
+
 
   getCartItems(){
     return this.cartItemsNum;
