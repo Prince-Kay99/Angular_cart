@@ -1,0 +1,25 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" style="padding:35px">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#" routerLink="/home">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Products</li>
+    </ol>
+  </nav>
+  
+
+  
+  <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 13px; padding-bottom: 35px;">
+    <div  *ngFor="let product of productObj"  class="col">
+      <div class="card" style="width: 18rem">
+        <img src="../assets/bmw.jpeg" class="card-img-top" alt="..." style="width:286px;height:160px"/>
+        <div class="card-body">
+          <h5  class="card-title">{{product.name}}</h5>
+          <P style="color: lawngreen">{{product.price}}</P>
+          <p class="card-text">{{product.details}}</p>
+          <a href="#" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ 
