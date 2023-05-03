@@ -15,14 +15,19 @@ export class ProductsComponent implements OnInit{
  * create constructor and initialize a productService
  * ngOnInit(){
  * 
- * this.api.getAllProducts().subscribe(data:any=>{this.product=data.products})
+ * this.api.getAllProducts().subscribe(data:any=>{this.product=data.products})-----CANCEL THIS
  * }
+ * outside and under onInit{}
+ * call this.api.getAllProducts      using subscribe......console to verify 
+ * 
  */
 
 
 
 
 
+//@Input('productCanBeAnyName' product?:product)   
+// this how you target a child component from parent component
 
 
 
