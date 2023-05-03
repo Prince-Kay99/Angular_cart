@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MyServiceService} from './my-service.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular_cart';
+  title = 'My Store';
+  constructor(private api: MyServiceService){
+
+  }
+
+  ngOnInit(){
+    this.api.getAllProducts().subscribe((data)=>{
+      console.warn("get api data", data);
+    })
+  }
 }
